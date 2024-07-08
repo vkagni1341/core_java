@@ -1,0 +1,65 @@
+Bubble Shorting :-
+---------------------
+
+import java.util.Arrays;
+
+public class Araay_Booble_Shorting {
+
+	public static void main(String[] args) 
+	{
+	  int []arr = {1,54,36,26,18,9,2};
+	  
+	  for(int i = 0;i<arr.length;i++)
+	  {
+		  for(int j=0;j<arr.length-1-i;j++)
+		  {
+			  if(arr[j]>arr[j+1])
+			  {
+				  int temp = arr[j];
+				  arr[j]=arr[j+1];
+				  arr[j+1]=temp;
+			  }
+		  }
+	  }
+	  System.out.println(Arrays.toString(arr));
+
+	}
+
+}
+---------------------------------------------------------------------------------------------------
+Selection sort :-
+------------------
+
+package com.Araay.Pratic;
+
+import java.util.Arrays;
+
+public class Arrays_Selection_sorting 
+{
+
+	public static void main(String[] args) 
+	{
+		int [] arr = {2,88,32,12,19,56,68};
+		int min ,temp;
+		
+		
+		for (int i = 0;i<arr.length;i++)
+		{
+			min=i;
+			for(int j=i+1;j<arr.length;j++)
+			{
+				if(arr[j]<arr[min])
+				{
+					min=j;
+				}
+			}
+			temp=arr[i];
+			arr[i]=arr[min];
+			arr[min]=temp;
+		}
+		
+              System.out.println(Arrays.toString(arr));
+	}
+
+}
+
