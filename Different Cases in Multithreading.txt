@@ -1,0 +1,98 @@
+Single Task from single Thrade :-
+----------------------------------
+public class test extends Thread
+{
+      public  void run() 
+      {
+		System.out.println("Thread 1");
+	  }
+	public static void main(String[] args) 
+	{
+		test t1 = new test();
+		t1.start();
+       
+	}
+
+}
+---------------------------------------------------------------------------------------------------
+
+Single task from Multiple Thread :-
+------------------------------------
+
+
+public class Thread02  extends Thread
+{
+      public void run() 
+      {
+		System.out.println("Thread 1");
+	  }
+	public static void main(String[] args) 
+	{
+		Thread02 t2 = new Thread02 ();
+		t2.start();
+		
+		Thread02 t02 = new Thread02 ();
+		t02.start();
+		
+
+	}
+
+}
+--------------------------------------------------------------------------------------------------
+Multiple Task from Single Thread :-
+-----------------------------------
+it is not possible and not usefully.
+-------------------------------------
+
+Multiple Task from Multiple Thread :-
+--------------------------------------
+lass test extends Thread 
+{
+	public void run() 
+	 {
+	     System.out.println("Thread 1");	
+	 }
+}
+
+class test01 extends Thread 
+{
+	public void run() 
+	 {
+	     System.out.println("Thread 2");	
+	 }
+}
+
+class test02 extends Thread 
+{
+	public void run() 
+	 {
+	     System.out.println("Thread 3");	
+	 }
+}
+
+
+
+public class Thread03 extends Thread
+{
+	public void run() 
+	 {
+	     System.out.println("Thread 4");	
+	 }
+
+	public static void main(String[] args) 
+	{
+		test t1 = new test();
+		t1.start();
+		
+		test01 t2 = new test01();
+		t2.start();
+		
+		test02 t3 = new test02();
+		t3.start();
+		
+		Thread03 t4 = new Thread03();
+		t4.start();
+
+	}
+
+}
