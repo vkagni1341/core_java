@@ -1,0 +1,35 @@
+Checking the Thread Is Alive Or Not :-
+======================================
+
+ public class Test1 extends Thread 
+ {
+   public void run() 
+    {
+       System.out.println("First Thread");
+
+       System.out.println("Current Thread Name "+Thread.currentThread().getName());
+       System.out.println("Updated Thread Name "+Thread.currentThread().getName());
+
+       System.out.println(Thread.currentThread().isAlive());
+ 
+    }
+
+  public static void main(String[]args)
+    {
+      System.out.println("Main Block");
+      
+      System.out.println("Current Thread Name -"+Thread.currentThread().getName());
+
+      Test1 t1 = new Test1();
+        t1.setName("Vipul");
+        t1.start();
+  
+      Test1 t2 = new Test1();
+        t2.setName("Akash");
+        t2.start();
+
+        System.out.println(Thread.currentThread().isAlive());
+    }
+ }
+---------------------------------------------------------------------------------------------------
+
