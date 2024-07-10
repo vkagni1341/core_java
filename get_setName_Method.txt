@@ -1,0 +1,27 @@
+MuntiThreading Methods (.getName(),.setName() ) :-
+--------------------------------------------------
+class GetName 
+  {
+    public static void main(String[] args) 
+       {
+        System.out.println("Try programiz.pro");
+        System.out.println(Thread.currentThread().getName());
+       }
+  }
+------------------------------------------------------------------------------------------
+
+
+public class SetName 
+{
+    public static void main(String[] args)
+     {
+        System.out.println("Thread");
+
+        System.out.println("Current Name: " + Thread.currentThread().getName());
+
+        Thread.currentThread().setName("Vipul"); 
+        System.out.println("Updated Name: " + Thread.currentThread().getName());
+     }
+}
+      
+        
