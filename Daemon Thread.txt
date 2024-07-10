@@ -1,0 +1,50 @@
+Daemon Thread :-
+===============
+[.setDaemon Thread]
+--------------------
+
+public class Test extends Thread
+{
+  public void run()
+  {
+    if(Thread.currentThread().isDaemon())
+      {
+         System.out.println("Child Daemon Thread");
+      } 
+    else
+      { 
+      System.out.println("Child Thread "+Thread.currentThread().getName());
+       }
+}
+public static void main (String[]args)
+{
+   System.out.println("Parent Thread ");
+   
+    Test t = new Test();
+    t.setDaemon(true);
+    t.start();
+ }
+}
+
+---------------------------------------------------------------------------------------------------
+
+[.isDaemaon Thread ]
+--------------------
+
+ public class Test extends Thread
+{
+   public void run()
+    {
+    System.out.println("Child Thread "+Thread.currentThread().isDaemon());
+    }
+
+  public static void main (String[]args)
+    {
+   System.out.println("Parent Thread ");
+   System.out.println("Parent Thread "+Thread.currentThread().isDaemon());
+   
+    Test t = new Test();
+    t.setDaemon(true);
+    t.start();
+    }
+}
