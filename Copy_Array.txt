@@ -1,0 +1,44 @@
+Copy The Array :-
+================
+
+import java.util.Arrays;
+public class test
+{
+    public static void main(String [] args)
+    {
+        int [] a = {1,2,3,4};
+     
+        int [] b = new int[a.length];
+        
+        System.out.println(Arrays.toString(a));
+        
+        for(int i=0;i<a.length;i++)
+        {
+            b[i]=a[i];
+        }
+        System.out.println("New Coped Array "+Arrays.toString(b));
+      
+    }
+}
+---------------------------------------------------------------------------------------------------
+
+Using Pre-Defined Method Using :-
+===============================
+
+import java.util.Arrays;
+public class test
+{
+    public static void main(String [] args)
+    {
+        int [] a = {1,2,3,4};
+     
+        int [] b = new int[a.length];
+        
+        System.out.println(Arrays.toString(a));
+        
+        System.arraycopy(a,0,b,0,a.length);
+        System.out.println("New Coped Array "+Arrays.toString(b));
+      
+    }
+}
+----------------------------------------------------------------------------------------------
