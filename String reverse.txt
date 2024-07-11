@@ -1,0 +1,38 @@
+String reverse :-
+================
+
+StringBuffer Class :-
+--------------------
+
+ 
+public class Test 
+  {
+      public static void main(String[] args) 
+       {
+         String a = "vipul";
+
+         StringBuffer st = new StringBuffer(a);
+         System.out.println(st.reverse());
+      
+         StringBuilder sb = new StringBuilder(a);
+         System.out.println(sb.reverse());
+       }
+  }
+
+---------------------------------------------------------------------------------------------------
+
+StringBuilder Class:-
+--------------------
+
+ public class PrintFibonacci 
+  {
+
+     public static void main(String[] args) 
+         {
+           String a = "vipul";
+            
+           StringBuilder sb = new StringBuilder(a);
+           System.out.println(sb.reverse());
+         }
+
+  }
