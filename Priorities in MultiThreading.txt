@@ -1,0 +1,69 @@
+Priorities related Thread in Multithreading :-
+=============================================
+[.getPriority]
+--------------
+
+
+public class Test extends Thread
+{
+    public void run()
+      {
+         System.out.println("Sub Thread");
+         System.out.println("Sub Thread Priorities "+Thread.currentThread().getPriority());
+           
+      }
+     
+     public static void main (String[]args)
+       {
+          System.out.println("Main Thread");
+          System.out.println("Main Thread Priorities "+Thread.currentThread().getPriority());
+          Test t = new Test();
+          t.start();
+       }
+}
+---------------------------------------------------------------------------------------------------
+
+[.setPriority](Change the user only Sub Thread value)
+------------------------------------------------------
+
+public class Test extends Thread
+{
+    public void run()
+      {
+         System.out.println("Sub Thread");
+         System.out.println("Sub Thread Priorities "+Thread.currentThread().getPriority());
+           
+      }
+     
+     public static void main (String[]args)
+       {
+          System.out.println("Main Thread");
+          System.out.println("Main Thread Priorities "+Thread.currentThread().getPriority());
+          Test t = new Test();
+          t.start();
+          t.setPriority(6);
+       }
+}
+---------------------------------------------------------------------------------------------------
+
+[.setPriority](Change the user only Both Thread value)
+------------------------------------------------------
+public class Test extends Thread
+{
+    public void run()
+      {
+         System.out.println("Sub Thread");
+         System.out.println("Sub Thread Priorities "+Thread.currentThread().getPriority());
+           
+      }
+     
+     public static void main (String[]args)
+       {
+          System.out.println("Main Thread");
+          Thread.currentThread().setPriority(6);
+          System.out.println("Main Thread Priorities "+Thread.currentThread().getPriority());
+          Test t = new Test();
+          t.start();
+          t.setPriortiy(7);
+       }
+}
