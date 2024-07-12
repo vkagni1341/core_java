@@ -1,0 +1,76 @@
+Prevent Thread Execution Methods :-
+===================================
+
+[Sleep Method (Using Try Catch )]
+---------------------------------
+
+ public class test extends Thread
+  {
+    public static void main (String []args)
+     {
+        for(int i=0;i<=10;i++)
+         {
+            try
+             {
+               System.out.println("Vipul");
+               Thread.sleep(900);
+             }
+            catch(Exception e)
+             {
+                System.out.println(e);
+             }
+        }
+    }
+} 
+---------------------------------------------------------------------------------------------------
+
+[Sleep Method (Using Throws)]
+-----------------------------
+
+ public class test extends Thread
+   {
+    public static void main (String []args) throws InterruptedException
+      {
+        for(int i=0;i<=10;i++)
+         {
+          
+               System.out.println("Vipul");
+               Thread.sleep(900);
+           
+            
+         }
+    }
+}
+---------------------------------------------------------------------------------------------------
+
+[Another Type]
+--------------
+
+public class test extends Thread
+ {
+    public void run() 
+     {
+        for(int i=0;i<=10;i++)
+         {
+             try 
+              {
+               System.out.println("Vipul");
+               Thread.sleep(900);
+              }
+             catch(Exception e)
+               {
+                 System.out.println(e);
+               }
+            
+         }
+     }
+    public static void main (String []args) 
+     {
+       Thread t = new Thread ();
+       t.start();
+     }
+}
+---------------------------------------------------------------------------------------------------
+
+
+
