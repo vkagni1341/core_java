@@ -1,0 +1,71 @@
+Project in join Based Methods:-
+===============================
+
+
+ 
+class MedcialTest extends Thread 
+ {
+     public void run()
+     {
+         try
+         {
+             System.out.println("Medical Test ");
+             Thread.sleep(1000);
+             System.out.println("Medical Test Completed");
+         }
+         catch(Exception e)
+         {
+             System.out.println(e);
+         }
+     }
+ }
+ class TestRide extends Thread 
+ {
+     public void run()
+     {
+         try
+         {
+             System.out.println("Test Drive start ");
+             Thread.sleep(1000);
+             System.out.println("Driving Test Completed");
+         }
+         catch(Exception e)
+         {
+             System.out.println(e);
+         }
+     }
+ }
+ class DocumentComplete extends Thread 
+ {
+     public void run()
+     {
+         try
+         {
+             System.out.println("Document Verify ");
+             Thread.sleep(1000);
+             System.out.println("Driving Licience Completed ");
+         }
+         catch(Exception e)
+         {
+             System.out.println(e);
+         }
+     }
+ }
+ public class main
+ {
+      public static void main (String []args) throws InterruptedException
+       {
+          MedcialTest mt = new MedcialTest();
+          mt.start();
+          mt.join();
+          
+          TestRide tr = new TestRide();
+          tr.start();
+          tr.join();
+          
+          DocumentComplete dc = new DocumentComplete();
+          dc.start();
+          dc.join();
+        
+       }
+ }
