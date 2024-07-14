@@ -1,0 +1,48 @@
+Synchronization Method :-
+========================
+
+ class BookMovieTicket
+ {
+     int totalSeat = 100 ;
+     synchronized void bookTicket(int seats)
+     {
+         if(totalSeat >= seats)
+         {
+             System.out.println(seats +" Ticket's book Completed !");
+             totalSeat-=seats;
+         }
+         else if(totalSeat < seats)
+         {
+               seats-=totalSeat;
+               System.out.println("You have only booked "+totalSeat);
+               System.out.println("Sorry...!!! Not a "+seats+" Ticket booked");
+               totalSeat-=totalSeat;
+         }
+         System.out.println("Vacent seats :  "+totalSeat);
+     }
+ }
+ 
+ public class vipul extends Thread
+ {
+     static BookMovieTicket b;
+     int seat ;
+     public void run()
+     {
+        b.bookTicket(seat);
+     }
+     
+     public static void main (String [] args) throws InterruptedException
+     {
+        b = new BookMovieTicket();
+         
+         vipul m = new vipul();
+         m.seat = 10;
+         m.start();
+         
+         
+         vipul n = new vipul();
+         n.seat = 70;
+         n.start();
+           
+     }
+ }
