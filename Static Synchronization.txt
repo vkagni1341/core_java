@@ -1,0 +1,83 @@
+Static Synchronization :-
+========================
+
+ class TrainTicket
+ {
+      static int totalTicket = 100 ;
+      static synchronized void bookTicket(int seats)
+      {
+         
+       
+            if(totalTicket >= seats)
+              {
+             System.out.println("Welcome The Train Booking center ...........!!");
+             System.out.println(seats+" Seat's Booked SuccessFully !! ");
+             totalTicket -= seats ;
+             System.out.println("Now Currently Vecant Seat's : " + totalTicket);
+              }
+            else if(seats > totalTicket)
+             {
+               seats-=totalTicket;
+               System.out.println("Welcome The Train Booking center ...........!!");
+              System.out.println("Now only "+totalTicket+" are booked...!! ");
+              System.out.println("Sorry...!! "+seats+" Ticket Not booked ..!!!");
+              totalTicket-=totalTicket;
+            }
+            else 
+             {
+               System.out.println("Now Vecant Seat :"+ totalTicket);
+             }
+         
+     }
+ }
+ 
+ class MyThread01 extends Thread 
+ {
+     TrainTicket t;
+     int seats ;
+     MyThread01(TrainTicket t, int seats)
+     {
+         this.t=t;
+         this.seats = seats ;
+     }
+     public void run()
+     {
+        t.bookTicket(seats) ;
+     }
+ }
+ 
+ class MyThread02 extends Thread 
+ {
+     TrainTicket t;
+     int seats ;
+     MyThread02(TrainTicket t, int seats)
+     {
+         this.t=t;
+         this.seats = seats ;
+     }
+     public void run()
+     {
+        t.bookTicket(seats) ;
+     }
+ }
+ public class BookTicket 
+ {
+    public static void main (String []args)
+     {
+        TrainTicket tt = new TrainTicket();
+        MyThread01 t1 = new MyThread01(tt,40);
+        t1.start();
+        
+        MyThread02 t2 = new MyThread02(tt,60);
+        t2.start();
+        
+        
+        TrainTicket tt1 = new TrainTicket();
+         MyThread01 t3 = new MyThread01(tt1,40);
+        t3.start();
+        
+        MyThread02 t4 = new MyThread02(tt1,60);
+        t4.start();
+        
+     }
+ }
