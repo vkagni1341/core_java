@@ -1,0 +1,39 @@
+Multithreading InterThread Communication :-
+==========================================
+[.wait(),.notify(),notifyAll()]
+--------------------------------
+
+
+ class TotalEarning extends Thread 
+ {
+     int total_Ticket = 100;
+     int total_Value =0;
+     public void run()
+     {
+        
+         synchronized(this)
+         {
+         for(int i=1;i<=total_Ticket;i++)
+         {
+              total_Value+=total_Ticket;
+         }
+         this.notify();
+         }
+     }
+ }
+ 
+ public class Earning
+ {
+     public static void main (String [] args) throws InterruptedException
+     {
+        TotalEarning te = new TotalEarning();
+        te.start();
+        
+        synchronized (te)
+        {
+            te.wait();
+            System.out.println("Total Earning is : "+te.total_Value);
+        }
+     }
+ }
+
