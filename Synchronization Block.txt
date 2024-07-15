@@ -1,0 +1,54 @@
+Synchronization Block :-
+=======================
+
+ class TrainTicket
+ {
+     int totalTicket = 100 ;
+    void bookTicket(int seats)
+     {
+         
+       synchronized(this)
+         {
+            if(totalTicket >= seats)
+              {
+             System.out.println("Welcome The Train Booking center ...........!!");
+             System.out.println(seats+" Seat's Booked SuccessFully !! ");
+             totalTicket -= seats ;
+             System.out.println("Now Currently Vecant Seat's : " + totalTicket);
+              }
+            else if(seats > totalTicket)
+             {
+               seats-=totalTicket;
+               System.out.println("Welcome The Train Booking center ...........!!");
+              System.out.println("Now a only "+totalTicket+" are booked...!! ");
+              totalTicket-=totalTicket;
+            }
+            else 
+             {
+               System.out.println("Now Vecant Seat :"+ totalTicket);
+             }
+         }
+     }
+ }
+ public class BookTicket extends Thread
+ {
+     static TrainTicket t;
+     int seat ;
+     public void run()
+     {
+         t.bookTicket(seat);
+     }
+     public static void main (String []args)
+     {
+         t = new TrainTicket();
+         
+         BookTicket bt1 = new BookTicket();
+         bt1.seat = 20;
+         bt1.start();
+         
+         BookTicket bt2 = new BookTicket();
+         bt2.seat = 90;
+         bt2.start();
+         
+     }
+ }
