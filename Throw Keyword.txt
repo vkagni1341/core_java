@@ -1,0 +1,61 @@
+Throw Keyword :-
+===============
+
+
+(Case 1)
+---------
+ public class test 
+ {
+   public static void main (String[]args)
+   {
+     int a = 10;
+     int b = 0;
+     int c;
+     
+     c=a+b;
+     System.out.println(c);
+     
+     c=a-b;
+     System.out.println(c);
+     
+     c=a*b;
+     System.out.println(c);
+     
+     try 
+     {
+      c=a/b;
+      System.out.println(c);
+     }
+     catch(ArithmeticException e)
+     {
+       System.out.println("Caught an exception: " +e.getMessage());
+         
+     }
+     
+     throw new ArithmeticException("Value must be a Not Zero");
+   }
+ }
+---------------------------------------------------------------------------------------------------
+
+(Case 2)
+--------
+
+public class Test1 
+  {   
+     
+    public static void main(String args[])
+      {  
+        
+        int age = 15;  
+        
+         
+        if(age<18) 
+          {  
+           throw new ArithmeticException(" *******Person is not eligible to vote**********");    
+          }  
+        else 
+          {  
+            System.out.println("Person is eligible to vote!!");  
+          } 
+      }    
+   }   
