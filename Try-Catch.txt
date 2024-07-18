@@ -1,0 +1,54 @@
+Exception Handling :-
+====================
+[try-catch]
+-----------
+
+
+(Without using)
+---------------
+
+public class test 
+ {
+   public static void main (String []args)
+   {
+     int a = 10 ;
+     int b = 0 ;
+     int c ;
+     c=a+b;
+     System.out.println(c);
+     c=a-b;
+     System.out.println(c);
+     c=a*b;
+     System.out.println(c);
+     c=a/b;
+     System.out.println(c);
+   }
+ }
+---------------------------------------------------------------------------------------------------(Using try-catch)
+-----------------
+
+ public class test 
+ {
+   public static void main (String []args)
+   {
+     int a = 10 ;
+     int b = 0 ;
+     int c ;
+     try {
+       c=a/b;
+     System.out.println(c);
+     } 
+     catch(Exception e) 
+     {
+       System.out.println(e);
+     }
+     
+     c=a+b;
+     System.out.println(c);
+     c=a-b;
+     System.out.println(c);
+     c=a*b;
+     System.out.println(c);
+     
+   }
+ }
