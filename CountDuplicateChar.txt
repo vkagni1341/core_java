@@ -1,0 +1,78 @@
+import java.util.HashMap;
+
+import java.util.Map;
+
+ 
+public class CountDuplicateChar
+{
+  
+public static void main (String[]args)
+  {
+	
+ 
+String originalString = "OpenAI ChatGPT ooo";
+	
+ 
+ 
+findDuplicateCharacters (originalString);
+  
+} 
+ 
+ 
+public static void findDuplicateCharacters (String input)
+  {
+	
+ 
+HashMap < Character, Integer > charCountMap = new HashMap <> ();
+	
+ 
+ 
+char[] charArray = input.toCharArray ();
+  
+ 
+ 
+for (char c:charArray)
+		{ 
+if (charCountMap.containsKey (c))
+		  {
+charCountMap.put (c, charCountMap.get (c) + 1);
+		   
+}
+		   else
+		   {
+		   
+charCountMap.put (c, 1);
+		   
+}
+		   
+}
+		   
+ 
+ 
+System.out.println ("Duplicate characters and their counts:");
+		   
+int duplicateCount = 0;
+  
+for (Map.Entry < Character, Integer > entry:charCountMap.
+				 entrySet ())
+		   {
+		   
+if (entry.getValue () > 1)
+		   {
+		   
+System.out.println (entry.getKey () + ": " + entry.getValue ());
+		   
+duplicateCount++; 
+}
+		   
+}
+		   
+ 
+ 
+System.out.println ("Total number of duplicate characters: " +
+									duplicateCount); 
+}
+		   
+}
+
+		   
