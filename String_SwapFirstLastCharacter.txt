@@ -1,0 +1,33 @@
+Write a program to swap first and last character from the given String.
+=======================================================================
+
+
+public class SwapFirstLastCharacter {
+
+    public static String swapFirstLast(String str) {
+        
+        if (str == null || str.length() <= 1) {
+            return str;
+        }
+
+        
+        char[] charArray = str.toCharArray();
+
+       
+        char temp = charArray[0];
+        charArray[0] = charArray[charArray.length - 1];
+        charArray[charArray.length - 1] = temp;
+
+        
+        return new String(charArray);
+    }
+
+    public static void main(String[] args) {
+        String originalString = "Hello World!";
+        
+        String modifiedString = swapFirstLast(originalString);
+        
+        System.out.println("Original String: " + originalString);
+        System.out.println("Modified String: " + modifiedString);
+    }
+}
