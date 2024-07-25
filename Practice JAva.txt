@@ -1,0 +1,13 @@
+Demo :-
+========
+       public class Program03 {
+       public static void main(String[] args) {
+	         int [][] arr01=new int[2][3];
+	         System.out.println(arr01);
+	         System.out.println(arr01[0]);
+	         System.out.println(arr01[1]);
+                 System.out.println(arr01[0][0]);
+                 System.out.println(arr01[0][1]);
+	
+             }
+}
