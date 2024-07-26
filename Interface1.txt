@@ -1,0 +1,22 @@
+Interface :-
+============
+
+ interface one
+ {
+     void sub();
+ }
+ 
+ public class test implements one
+ {
+     int a=10;
+     int b=20;
+     public static void main (String []args)
+     {
+         test t =  new test();
+         t.sub();
+     }
+      public void sub()
+        {
+            System.out.println("Difference  : "+(b-a));
+        }
+ }
