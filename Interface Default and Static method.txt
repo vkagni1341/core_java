@@ -1,0 +1,35 @@
+In Interface Default and Static method :-
+=========================================
+
+ 
+interface one
+ {
+     void sub();
+    default void display()
+    {
+        System.out.println("Default Method Run");
+        
+    }
+    static void display1()
+    {
+        System.out.println("Static Method Run");
+    }
+ }
+ 
+ public class test implements one
+ {
+     int a=10;
+     int b=20;
+     public static void main (String []args)
+     {
+         test t =  new test();
+         t.sub();
+         t.display();
+         one.display1();
+     }
+    
+      public  void sub()
+        {
+            System.out.println("Difference  : "+(b-a));
+        }
+ }
