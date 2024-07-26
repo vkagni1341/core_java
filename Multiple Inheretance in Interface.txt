@@ -1,0 +1,48 @@
+Multiple Inheretance in Interface :-
+====================================
+
+ interface one
+ {
+     void sub();
+     int a=100;
+     int b=200;
+    default void display1()
+    {
+        System.out.println("Default Method Run");
+        
+    }
+    static void display2()
+    {
+        System.out.println("Static Method Run");
+    }
+ }
+ interface two 
+ {
+     default void display3()
+    {
+        System.out.println("Default Method Run");
+        
+    }
+      static void display4()
+    {
+        System.out.println("Static Method Run");
+    }
+ }
+ public class test implements one ,two
+ {
+     
+     public static void main (String []args)
+     {
+         test t =  new test();
+         t.sub();
+         t.display1();
+         one.display2();
+         t.display3();
+         two.display4();
+     }
+    
+      public  void sub()
+        {
+            System.out.println("Difference  : "+(b-a));
+        }
+ }
