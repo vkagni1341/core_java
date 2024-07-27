@@ -1,0 +1,25 @@
+Static Inner Class :-
+====================
+
+ 
+class BigOuter
+{
+     static class Nest   //static nested inner class   
+     {
+          void go()  //Instance method of static inner class
+          {
+               System.out.println("Static nested class");  
+          }  
+     }
+}
+public class Test11
+{    
+      public static void main(String args[])
+      {
+         
+          BigOuter.Nest n = new BigOuter.Nest();
+          n.go();
+			
+			
+      } 
+}
