@@ -1,0 +1,21 @@
+Static Inner Class :-(Type-2)
+====================
+class Outer    
+{  
+	  static int x = 25; 
+	   
+	  static class Inner 
+	  {  
+			static void msg()
+				{
+					System.out.println("x value is  "+x);					
+				}		
+	  }	  
+}
+class Test13
+{  
+	public static void main(String args[])
+	{  
+		Outer.Inner.msg();
+	}  
+} 
