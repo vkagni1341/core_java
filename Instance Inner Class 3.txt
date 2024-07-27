@@ -1,0 +1,32 @@
+Instance Inner Class :- (Type-3) 
+================================
+
+
+class MyOuter {
+    private int x = 7;
+
+    public void makeInner() {
+        System.out.println("Outer Class ");
+        System.out.println("Number is " + x);
+    }
+
+    class MyInner {
+        private int y = 15;
+
+        public void seeOuter() {
+            MyOuter my = new MyOuter();
+            my.makeInner();
+            System.out.println("Inner Class run");
+            System.out.println("Sum of : " + (my.x + y));
+            System.out.println("Outer x is " + y);
+        }
+    }
+}
+
+public class Test2 {
+    public static void main(String args[]) {
+        MyOuter my = new MyOuter();
+        MyOuter.MyInner m = my.new MyInner();
+        m.seeOuter();
+    }
+}
