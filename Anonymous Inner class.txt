@@ -1,0 +1,29 @@
+Anonymous Inner class:-
+========================
+
+
+class Tech
+{
+       public void tech() 
+       {
+	      System.out.println("Tech");
+       }
+}
+public class Test17
+{     
+       public static void main(String... args)
+       {	   
+
+	       Tech a = new Tech()  //Anonymous inner class
+			{
+                              
+				    @Override
+					public void tech() 
+					{
+						 System.out.println("anonymous tech");
+					}                   
+
+			};
+			a.tech();	
+       }
+}
