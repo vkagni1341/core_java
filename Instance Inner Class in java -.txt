@@ -1,0 +1,29 @@
+Instance Inner Class in java :-
+===============================
+
+ class test1
+ {
+     int a=10;
+     void display()
+     {
+     System.out.println("Outer class run");
+     }
+     class test2
+     {
+         void display()
+         {
+         System.out.println("Inner Class Run");
+         }
+     }
+ }
+ public class main
+ {
+     public static void main(String[]args)
+     {
+         test1 t1 = new test1();
+         t1.display();
+         test1.test2 t2 = t1.new test2();
+         t2.display();
+         System.out.println("Number is : "+t1.a);
+     }
+ }
