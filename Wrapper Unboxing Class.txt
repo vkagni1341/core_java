@@ -1,0 +1,42 @@
+Wrapper Class :-
+================
+
+(Unboxing)
+----------
+
+1)
+
+
+public class Main 
+ {
+    public static void main (String[]args)
+      { 
+         Integer a = 10 ;
+         System.out.println(a.toString());
+
+         int b = a.intValue();
+         System.out.println(b);
+ 
+       }
+
+  }
+
+
+
+
+2)
+
+
+public class Main 
+ {
+    public static void main (String[]args)
+      { 
+         Integer a = 10 ;
+         System.out.println(a.toString());
+
+         int b = a;
+         System.out.println(b);
+ 
+       }
+
+  }
