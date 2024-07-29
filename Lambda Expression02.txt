@@ -1,0 +1,56 @@
+Lambda Expression :-
+====================
+
+1)
+
+
+  import java.util.*;
+
+interface demo 
+ {
+    int getLength(String str); 
+   }
+
+public class Main
+ {
+    public static void main (String []args)
+      {
+         demo d = str -> str.length();
+         
+          Scanner sc = new Scanner(System.in);
+          System.out.println("Enter words ");
+          String abc = sc.nextLine();
+
+          System.out.println("Length of "+abc+" is "+d.getLength(abc));
+          sc.close();
+        }
+
+  }
+
+
+
+2)
+
+interface demo 
+ {
+    void run(); 
+   }
+
+public class Main
+ {
+    public static void main (String []args)
+      {
+         demo d = () -> System.out.println("Car is Running ");
+         
+         demo e = () -> System.out.println("Bike is Running");
+         
+         demo f  = () -> System.out.println("Train is Running");
+         
+         d.run(); e.run(); f.run();
+         
+        
+
+         
+        }
+
+  }
