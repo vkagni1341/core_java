@@ -1,0 +1,39 @@
+Lambda Expression :-
+====================
+
+1)
+
+
+ interface demo 
+  {
+    void show();
+  }
+
+public class Demo1
+ {
+    public static void main(String[]args)
+     {
+         demo d = () -> System.out.println("Hello Lembda");
+              d.show();
+       }
+  }
+
+
+
+
+2)
+
+
+interface demo
+ {
+   void sum (int a ,int b);
+      
+  }
+ public class Demo1
+  {
+    public static void main (String[]args)
+      {
+         demo d = (a,b) ->  System.out.println("Sum = "+(a+b));
+               d.sum(10,20);
+       }
+  }
