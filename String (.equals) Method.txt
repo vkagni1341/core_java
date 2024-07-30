@@ -1,0 +1,25 @@
+String (.equals) Method (object class) :-
+========================================
+
+
+
+  public class main 
+ {
+   public static void main (String[]args)
+     { 
+       String s1 = new String("Vipul");
+       String s2 = new String("Vipul");
+
+       System.out.println(s1 .equals(s2));
+
+
+       String s3 = "Ma";
+       String s4 = "Ma";
+        
+       System.out.println(s3 .equals(s4));
+      
+     }
+ }
+ 
+
+
