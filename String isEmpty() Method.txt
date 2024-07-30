@@ -1,0 +1,15 @@
+String isEmpty() Method :-
+==========================
+
+
+ public class main
+{
+    public static void main (String[]args)
+    {
+        String str = "Vipul";
+        System.out.println(str.isEmpty());
+        String rt = "" ;
+        System.out.println(rt.isEmpty());
+        
+    }
+}
