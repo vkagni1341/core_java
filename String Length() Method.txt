@@ -1,0 +1,11 @@
+String Length() Method :-
+=========================
+
+public class 
+{
+    public static void main (String[]args)
+    {
+        String str = "Vipul";
+        System.out.println(str.length());
+    }
+}
