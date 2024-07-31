@@ -1,0 +1,14 @@
+String Replace() Method :-
+===========================
+
+
+public class Main 
+{
+ public static void main (String[]args)
+  {
+    String str = "Vipul___Agnihotri";
+    
+  System.out.println(str.replace("___","   "));
+   
+   }
+}
