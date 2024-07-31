@@ -1,0 +1,14 @@
+String replaceAll() Method :-
+=============================
+
+
+
+ public class Main 
+{
+ public static void main (String[]args)
+  {
+    String str = "my name is vipul .";
+    
+    System.out.println(str.replaceAll("i","it'"));
+   }
+}
