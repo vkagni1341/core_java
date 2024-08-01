@@ -1,0 +1,16 @@
+String substring() Method :-
+=============================
+
+ public class Main 
+{
+ public static void main (String[]args)
+  {
+    String str = "Vipul___Agnihotri";
+    
+    System.out.println(str.substring(5));
+     System.out.println(str.substring(5,12));
+    
+
+
+   }
+}
