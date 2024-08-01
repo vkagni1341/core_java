@@ -1,0 +1,19 @@
+String CompareTo() Method :-
+============================
+
+
+
+public class Main 
+{
+ public static void main (String[]args)
+  {
+    String str = "Vipul";
+    String ptr = "Vipul";
+    String vtr = "vipul";
+
+    System.out.println(str.compareTo(ptr));
+    
+    System.out.println(str.compareTo(vtr));
+
+   }
+}
