@@ -1,0 +1,19 @@
+String CompareToIgnoreCase() Method :-
+=======================================
+
+
+
+ public class Main 
+{
+ public static void main (String[]args)
+  {
+    String str = "vipul";
+    String ptr = "Vipul";
+   
+
+    System.out.println(str.compareTo(ptr));
+    
+    System.out.println(str.compareToIgnoreCase(ptr));
+
+   }
+}
