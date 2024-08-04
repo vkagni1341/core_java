@@ -1,0 +1,16 @@
+String contains(),startWith(),endsWith() Methods :-
+==================================================== 
+
+
+public class main 
+ {
+     public static void main (String []args)
+     {
+         String str = "Vipul" ;
+         
+         System.out.println(str.contains("i"));
+         System.out.println(str.startsWith("V"));
+         System.out.println(str.endsWith("l"));
+         
+     }
+ }
