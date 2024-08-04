@@ -1,0 +1,16 @@
+String indexOf(),lastIndexOf(),charAt() method :-
+==================================================
+ 
+
+public class main 
+ {
+     public static void main (String []args)
+     {
+         String str = "Vipul" ;
+         
+         System.out.println(str.indexOf("i"));
+         System.out.println(str.lastIndexOf("u"));
+         System.out.println(str.charAt(4));
+         
+     }
+ }
