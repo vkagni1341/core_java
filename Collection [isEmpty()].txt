@@ -1,0 +1,21 @@
+Collection [isEmpty()] :-
+==========================
+
+
+
+import java.util.ArrayList;
+ public class main 
+ {
+     public static void main (String []args)
+     {
+         ArrayList al = new ArrayList();
+         System.out.println(al.isEmpty());
+         al.add(100);
+         al.add(200);
+         al.add(300);
+         System.out.println(al);
+         System.out.println(al.isEmpty());
+        
+         
+     }
+ }
