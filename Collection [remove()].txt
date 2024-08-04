@@ -1,0 +1,26 @@
+Collection [remove()] :-
+========================
+
+
+
+import java.util.ArrayList;
+ public class main 
+ {
+     public static void main (String []args)
+     {
+         ArrayList al = new ArrayList();
+        
+         al.add(100);
+         al.add(200);
+         al.add(300);
+         System.out.println(al);
+        
+         System.out.println(al.size());
+          al.remove(2);//given index value of object 
+         System.out.println(al);
+         System.out.println(al.size());
+         
+        
+         
+     }
+ }
