@@ -1,0 +1,30 @@
+Collection FrameWork :-
+=======================
+
+Collection Method's [add(),addAll()]:-
+--------------------------------------
+
+
+
+import java.util.ArrayList;
+ public class main 
+ {
+     public static void main (String []args)
+     {
+         ArrayList al = new ArrayList();
+         al.add(100);
+         al.add(200);
+         al.add(300);
+         System.out.println(al);
+         
+         ArrayList sl = new ArrayList();
+         sl.add("aaa");
+         sl.add("bbb");
+         sl.add("ccc");
+         System.out.println(sl);
+         
+         al.addAll(sl);
+         System.out.println(al);
+         
+     }
+ }
