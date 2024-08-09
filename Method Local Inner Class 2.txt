@@ -1,0 +1,36 @@
+Method Local Inner Class:-
+==========================
+
+
+class MyOuter
+{
+	private int x = 100;
+	
+	public void accept()
+	{		
+		class Inner
+		{
+			private int x = 200;
+			
+			public void show()
+			{
+				System.out.println("Inner class x variable :"+this.x);
+				System.out.println("Outer class x variable :"+MyOuter.this.x);
+			}
+		}
+		
+		new Inner().show();
+	}
+	
+}
+
+
+public class Test16 {
+
+	public static void main(String[] args)
+	{
+		new MyOuter().accept();
+
+	}
+
+}
