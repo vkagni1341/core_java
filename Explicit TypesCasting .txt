@@ -1,0 +1,13 @@
+                       /* Explicit TypesCasting */
+                       
+    public class main 
+    {
+        public static void main (String[]args)
+        {
+            double a = 10.50;
+            System.out.println(a);
+            int b = (int)a; // Explicity TypeCasting
+            
+            System.out.println(b);
+        }
+    }
